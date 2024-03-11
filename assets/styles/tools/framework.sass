@@ -1,0 +1,107 @@
+.wrapper
+  position: relative
+  z-index: 2
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+
+.cont
+  margin: 0 auto
+  width: 100%
+  max-width: calc(1296px + 72px + 72px)
+  padding: 0 72px
+  @include media(lg)
+    padding: 0 24px
+    max-width: calc(720px + 24px + 24px)
+  @include media(xs)
+    padding: 0 16px
+    max-width: calc(328px + 16px + 16px)
+
+.h1
+  font-size: 68px
+  line-height: 105%
+  font-weight: 400
+  @include media(lg)
+    font-size: 44px
+  @include media(xs)
+    font-size: 36px
+
+.h2
+  font-size: 48px
+  line-height: 120%
+  font-weight: 400
+  @include media(lg)
+    font-size: 40px
+    line-height: 110%
+  @include media(xs)
+    font-size: 32px
+    line-height: 120%
+
+.h3
+  font-size: 36px
+  line-height: 120%
+  font-weight: 400
+  @include media(lg)
+    font-size: 24px
+    line-height: 120%
+  @include media(xs)
+    font-size: 20px
+    line-height: 110%
+
+.h4
+  font-size: 24px
+  line-height: 120%
+
+.h5
+  font-size: 20px
+  line-height: 110%
+
+.text
+  font-size: 20px
+  line-height: 140%
+  @include media(lg)
+    font-size: 16px
+  @include media(xs)
+    font-size: 14px
+    line-height: 130%
+
+.text-small
+  font-size: 14px
+  line-height: 130%
+
+.purple
+  color: #CDAAF5
+  font-weight: 700
+
+.blue
+  font-weight: 700
+  background-color: #01fbfe
+  background-image: linear-gradient(165deg, #01fbfe 0%, #0271f0 100%)
+  background-clip: text
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+.slider-nav-prev, .slider-nav-next
+  width: 42px
+  height: 42px
+  display: flex
+  align-items: center
+  justify-content: center
+  +bgIcon('ic_nav_arrow_bg.svg')
+  transition-duration: $transition-duration
+  transition-property: background
+  &::before
+    content: ''
+    width: 16px
+    height: 12px
+    +bgIcon('ic_nav_arrow_right.svg')
+  &:hover
+    +bgIcon('ic_nav_arrow_bg_hover.svg')
+  @include media(lg)
+    width: 48px
+    height: 48px
+
+.slider-nav-prev
+  transform: scaleX(-1)
+
+.slider-nav-next

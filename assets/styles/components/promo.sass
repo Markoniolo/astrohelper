@@ -1,0 +1,115 @@
+.promo
+  margin-bottom: 120px
+  @include media(lg)
+    margin-bottom: 100px
+  @include media(xs)
+    margin-bottom: 72px
+
+.promo__cont
+
+.promo__wrap
+  display: flex
+  justify-content: space-between
+  @include media(xs)
+    display: block
+
+.promo__box
+  max-width: 526px
+  width: 100%
+  @include media(lg)
+    max-width: 308px
+  @include media(xs)
+    margin-bottom: 44px
+
+.promo__title
+  margin-bottom: 28px
+  @include media(lg)
+    margin-bottom: 20px
+  @include media(xs)
+    margin-bottom: 16px
+
+.promo__text
+  &:not(:last-of-type)
+    margin-bottom: 24px
+    @include media(lg)
+      margin-bottom: 16px
+    @include media(xs)
+      margin-bottom: 12px
+
+.promo__area
+  max-width: 526px
+  width: 100%
+  @include media(lg)
+    max-width: 348px
+
+.promo__slider
+
+.promo__nav
+  width: 44px
+  height: 54px
+  +bgIcon('ic_promo_nav_left.svg')
+
+.promo__nav_left
+
+.promo__nav_right
+  transform: rotate(180deg)
+
+.promo__tabs
+  padding: 7px 8px 8px
+  display: flex
+  gap: 8px
+  +bgIcon('promo/promo-tabs-bg.svg')
+
+.promo__tab
+  padding: 16px 28px
+  color: #ffffff
+  transition-property: color
+  transition-duration: $transition-duration
+  &:hover
+    color: #B492FF
+
+.promo__tab_active
+  +bgIcon('promo/promo-tab-bg.svg')
+  cursor: default
+  &:hover
+    color: #ffffff
+
+.promo__wrapper
+
+.promo__slide
+  +bgIcon('promo/promo-slide-bg.png')
+  min-height: 502px
+  padding: 63px 60px
+  text-align: center
+  @include media(lg)
+    padding: 29px 28px
+    min-height: 386px
+  @include media(xs)
+    padding: 28px 24px
+    min-height: 330px
+
+.promo__headline
+  margin-bottom: 26px
+  @include media(lg)
+    margin-bottom: 20px
+  @include media(xs)
+    margin-bottom: 16px
+
+.promo__descr
+  margin-bottom: 26px
+  @include media(lg)
+    margin-bottom: 20px
+  @include media(xs)
+    margin-bottom: 16px
+
+.promo__price
+  margin-bottom: 8px
+  color: $green
+
+.promo__note
+  color: #8a63cf
+  margin-bottom: 26px
+  @include media(lg)
+    margin-bottom: 20px
+  @include media(xs)
+    margin-bottom: 16px

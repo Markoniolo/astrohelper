@@ -1,0 +1,16 @@
+include ../../_variables
+include _connect-style
+include _title
+
+doctype html
+html(lang='en')
+  head
+    include _head
+    block head
+  body
+    include header
+    include cap-bg
+    main.wrapper
+      block body
+    include footer
+    include scripts

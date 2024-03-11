@@ -1,0 +1,122 @@
+.about
+  margin-bottom: 160px
+  @include media(lg)
+    margin-bottom: 137px
+  @include media(xs)
+    margin-bottom: 60px
+
+.about__cont
+  padding: 0
+  @include media(lg)
+    padding: 0
+  @include media(xs)
+    padding: 0
+
+.about__area
+  display: flex
+  min-height: 700px
+  position: relative
+  @include media(lg)
+    min-height: 601px
+  @include media(xs)
+    flex-direction: column
+
+.about__left
+  max-width: 834px
+  width: 100%
+  margin-left: 6px
+  overflow: hidden
+  @include media(lg)
+    margin-left: 0
+  @include media(xs)
+    max-width: 100%
+
+.about__title
+  margin-bottom: 36px
+  color: #cdaaf5
+  padding-left: 119px
+  @include media(lg)
+    margin-bottom: 47px
+    padding-left: 42px
+  @include media(xs)
+    margin-bottom: 32px
+    padding-left: 0
+    text-align: center
+
+.about__slider
+  position: relative
+  padding-bottom: 77px
+  .swiper-slide-active
+    width: 306px
+    .about__image
+      height: 544px
+  @include media(lg)
+    padding-bottom: 95px
+  @include media(xs)
+    padding-bottom: 88px
+
+.about__wrapper
+  align-items: center
+
+.about__slide
+  width: 160px
+
+.about__picture
+
+
+.about__image
+  border-radius: 8px
+  height: 288px
+  object-fit: cover
+
+.about__slider-nav
+  position: absolute
+  bottom: 0
+  left: 40%
+  display: flex
+  gap: 24px
+  @include media(lg)
+    gap: 28px
+
+.about__right
+  position: absolute
+  z-index: 1
+  top: 0
+  right: 0
+  max-width: 708px
+  width: 100%
+  @include media(lg)
+    max-width: 372px
+  @include media(xs)
+    max-width: 100%
+    position: static
+    order: -1
+    margin-bottom: 44px
+
+.about__box
+  padding: 101px 72px 101px 110px
+  +bgIcon('about/about-box-bg.png')
+  background-size: cover
+  @include media(lg)
+    padding: 44px 26px 43px 44px
+    +bgIcon('about/about-box-bg_372.png')
+    background-size: cover
+  @include media(xs)
+    padding: 48px 16px
+    +bgIcon('about/about-box-bg_360.png')
+    background-size: cover
+
+.about__headline
+  margin-bottom: 28px
+  @include media(lg)
+    margin-bottom: 20px
+  @include media(xs)
+    margin-bottom: 16px
+
+.about__text
+  &:not(:last-of-type)
+    margin-bottom: 24px
+    @include media(lg)
+      margin-bottom: 16px
+    @include media(xs)
+      margin-bottom: 12px

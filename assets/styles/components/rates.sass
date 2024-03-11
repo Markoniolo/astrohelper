@@ -1,0 +1,155 @@
+.rates
+  margin-bottom: 150px
+  @include media(lg)
+    margin-bottom: 107px
+  @include media(xs)
+    margin-bottom: 72px
+
+.rates__cont
+
+.rates__title
+  margin-bottom: 12px
+  text-align: center
+
+.rates__subtitle
+  margin-bottom: 44px
+  text-align: center
+  @include media(lg)
+    margin-bottom: 36px
+  @include media(xs)
+    margin-bottom: 28px
+
+.rates__wrap
+  display: flex
+  gap: 24px
+  justify-content: center
+  @include media(lg)
+    gap: 26px
+  @include media(xs)
+    flex-direction: column
+    gap: 20px
+
+.rates__area
+  position: relative
+  z-index: 1
+  max-width: 526px
+  width: 100%
+  text-align: center
+  padding: 63px 90px
+  @include media(lg)
+    padding: 28px 33px
+  @include media(xs)
+    padding: 40px 24px
+
+.rates__area_left
+  +bgIcon('rates/rates-bg-left.png')
+  @include media(lg)
+    +bgIcon('rates/rates-bg-left_346.png')
+  @include media(xs)
+    +bgIcon('rates/rates-bg-left_328.png')
+  &::before
+    content: ''
+    width: 421px
+    height: 451px
+    position: absolute
+    z-index: -1
+    top: 56px
+    right: 15px
+    +bgIcon('rates/rates-stars-left.png')
+    @include media(lg)
+      +bgIcon('rates/rates-stars-left_247.png')
+      width: 247px
+      height: 402px
+      top: 47px
+      right: 22px
+    @include media(xs)
+      +bgIcon('rates/rates-stars-left_221.png')
+      width: 221px
+      height: 368px
+      top: 44px
+      right: 13px
+
+.rates__area_right
+  .rates__headline
+    color: $green
+  +bgIcon('rates/rates-bg-right.png')
+  @include media(lg)
+    +bgIcon('rates/rates-bg-right_348.png')
+  @include media(xs)
+    +bgIcon('rates/rates-bg-right_328.png')
+  &::before
+    content: ''
+    width: 481px
+    height: 667px
+    position: absolute
+    z-index: -1
+    top: 19px
+    right: 25px
+    +bgIcon('rates/rates-stars-right.png')
+    @include media(lg)
+      +bgIcon('rates/rates-stars-right_318.png')
+      top: 16px
+      right: 15px
+      width: 318px
+      height: 405px
+    @include media(xs)
+      +bgIcon('rates/rates-stars-right_291.png')
+      top: 28px
+      right: 24px
+      width: 291px
+      height: 371px
+  &:after
+    content: ''
+    width: 522px
+    height: 179px
+    position: absolute
+    z-index: -1
+    bottom: 18px
+    right: 2px
+    +bgIcon('rates/rates-decor-right.png')
+    @include media(lg)
+      +bgIcon('rates/rates-decor-right_344.png')
+      width: 344px
+      height: 109px
+      bottom: 16px
+    @include media(xs)
+      +bgIcon('rates/rates-decor-right_328.png')
+      bottom: 12px
+      right: 0
+      width: 100%
+
+.rates__headline
+  margin-bottom: 36px
+  @include media(lg)
+    margin-bottom: 20px
+
+.rates__box
+  &:not(:last-of-type)
+    margin-bottom: 32px
+    @include media(lg)
+      margin-bottom: 20px
+
+.rates__name
+  margin-bottom: 12px
+  color: #C1ADF4
+  @include media(lg)
+    margin-bottom: 8px
+  @include media(xs)
+    margin-bottom: 4px
+
+.rates__value
+  &:not(:last-of-type)
+    margin-bottom: 8px
+    @include media(lg)
+      margin-bottom: 7px
+    @include media(xs)
+      margin-bottom: 5px
+
+.rates__value_red
+  color: #EB7F7F
+
+.rates__value_line-through
+  text-decoration: line-through
+
+.rates__value_green
+  color: $green

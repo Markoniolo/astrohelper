@@ -1,0 +1,141 @@
+.cap
+  margin-bottom: 60px
+  padding-bottom: 200px
+  overflow: hidden
+  @include media(lg)
+    margin-bottom: 68px
+    padding-bottom: 90px
+  @include media(xs)
+    padding-bottom: 0
+    margin-bottom: 60px
+
+.cap__cont
+
+.cap__area
+  position: relative
+  padding-top: 142px
+  @include media(lg)
+    padding-top: 85px
+  @include media(xs)
+    padding-top: 48px
+
+.cap__title
+  margin-bottom: 28px
+  font-weight: 400
+  max-width: 733px
+  width: 100%
+  @include media(lg)
+    max-width: 475px
+  @include media(xs)
+    text-align: center
+    max-width: 328px
+    margin: 0 auto 20px
+
+.cap__text
+  margin-bottom: 40px
+  max-width: 450px
+  width: 100%
+  font-size: 20px
+  line-height: 140%
+  span
+    font-weight: 700
+  @include media(lg)
+    margin-bottom: 36px
+    font-size: 16px
+    max-width: 350px
+  @include media(xs)
+    text-align: center
+    font-size: 14px
+    line-height: 130%
+    max-width: 315px
+    margin: 0 auto 28px
+
+.cap__button-box
+  margin-bottom: 147px
+  position: relative
+  @include media(lg)
+    margin-bottom: 59px
+  @include media(xs)
+    margin: 0 auto 41px
+    max-width: 173px
+    width: 100%
+
+.cap__button-decor
+  position: absolute
+  z-index: -1
+  top: -65px
+  left: -65px
+  width: 180px
+  @include media(lg)
+    width: 131px
+    top: -35px
+    left: -25px
+  @include media(xs)
+    width: 105px
+    top: -22px
+    left: -20px
+
+.cap__button-decor-image
+  height: 180px
+  @include media(lg)
+    height: 119px
+  @include media(xs)
+    height: 96px
+
+.cap__button
+
+.cap__picture
+  position: absolute
+  z-index: -1
+  width: 657px
+  top: 60px
+  right: -40px
+  @include media(lg)
+    width: 447px
+    top: 110px
+    right: -120px
+  @include media(xs)
+    position: static
+    max-width: 326px
+    width: 100%
+    margin: 0 auto 37px
+
+.cap__image
+  height: 673px
+  object-fit: cover
+  @include media(lg)
+    height: 458px
+  @include media(xs)
+    height: 335px
+
+.cap__apps
+  display: flex
+  gap: 17px
+  @include media(lg)
+    flex-direction: column
+    gap: 12px
+  @include media(xs)
+    flex-direction: row
+    justify-content: center
+
+.cap__app
+  background-color: #24095F
+  width: 242px
+  border-radius: 8px
+  transition-property: background-color
+  transition-duration: 0.3s
+  &:hover
+    background-color: #34147a
+  @include media(lg)
+    width: 196px
+    border-radius: 6px
+  @include media(xs)
+    width: 158px
+    border-radius: 8px
+
+.cap__app-icon
+  height: 82px
+  @include media(lg)
+    height: 60px
+  @include media(xs)
+    height: 54px

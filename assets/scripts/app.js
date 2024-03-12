@@ -1,2 +1,5 @@
 import './components/header'
 import './components/about-slider'
+import './components/promo-slider'
+import './components/faq'
+import './components/scroll-to-anchor'

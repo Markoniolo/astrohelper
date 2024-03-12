@@ -1,0 +1,77 @@
+.faq
+  margin-bottom: 120px
+  @include media(lg)
+    margin-bottom: 113px
+  @include media(xs)
+    margin-bottom: 72px
+
+.faq__cont
+
+.faq__wrap
+  max-width: 1076px
+  margin: 0 auto
+
+.faq__title
+  margin-bottom: 36px
+  text-align: center
+  @include media(lg)
+    margin-bottom: 28px
+
+.faq__box
+  +bgIcon('faq/faq-box-bg.svg')
+  transition-property: background
+  transition-duration: $transition-duration
+  &:not(:last-of-type)
+    margin-bottom: 12px
+    @include media(xs)
+      margin-bottom: 8px
+  &:hover
+    +bgIcon('faq/faq-box-bg-hover.svg')
+
+.faq__box_active
+  transition-duration: 0s
+  +bgIcon('faq/faq-box-bg-open.svg')
+  &:hover
+    +bgIcon('faq/faq-box-bg-open.svg')
+  .faq__content
+    display: block
+  .faq__top
+    @include media(lg)
+      padding: 28px 60px 16px 28px
+    @include media(xs)
+      padding: 28px 50px 16px 20px
+    &::before
+      transform: rotate(45deg)
+
+.faq__top
+  position: relative
+  padding: 28px 70px 28px 28px
+  cursor: pointer
+  @include media(lg)
+    padding: 28px 60px 28px 28px
+  @include media(xs)
+    padding: 28px 50px 28px 20px
+  &::before
+    content: ''
+    width: 32px
+    height: 32px
+    position: absolute
+    top: 28px
+    right: 28px
+    transition-duration: $transition-duration
+    transition-property: transform
+    +bgIcon('ic_faq_cross.svg')
+    @include media(lg)
+      width: 24px
+      height: 24px
+    @include media(xs)
+      width: 20px
+      height: 20px
+      right: 20px
+
+.faq__content
+  display: none
+  padding: 0 28px 28px
+  color: #D4C4FB
+  @include media(xs)
+    padding: 0 20px 28px

@@ -1,0 +1,57 @@
+.order
+  overflow: hidden
+  //@include media(xs)
+  //  margin-bottom: -10px
+
+.order__cont
+  position: relative
+  +bgIcon('order/order-bg.png')
+  background-size: cover
+  padding-top: 60px
+  padding-bottom: 201px
+  @include media(lg)
+    padding-top: 16px
+    padding-bottom: 93px
+    background: none
+  @include media(xs)
+    padding-bottom: 280px
+    +bgIcon('order/order-bg_360.png')
+    background-position: bottom
+    background-size: initial
+  &::before
+    @include media(lg)
+      content: ''
+      position: absolute
+      z-index: -1
+      top: 0
+      bottom: 0
+      left: -93px
+      right: -93px
+      +bgIcon('order/order-bg_953.png')
+      background-position: bottom
+      background-size: initial
+    @include media(xs)
+      content: none
+
+.order__area
+  @include media(xs)
+    text-align: center
+
+.order__title
+  margin-bottom: 32px
+  @include media(lg)
+    margin-bottom: 24px
+  @include media(xs)
+    margin-bottom: 16px
+
+.order__text
+  margin-bottom: 32px
+  max-width: 390px
+  @include media(lg)
+    margin-bottom: 24px
+    max-width: 350px
+  @include media(xs)
+    max-width: 320px
+    margin: 0 auto 16px
+
+.order__button

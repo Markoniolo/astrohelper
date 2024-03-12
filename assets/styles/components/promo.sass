@@ -1,25 +1,52 @@
 .promo
   margin-bottom: 120px
+  +bgIcon('promo/promo-bg.svg')
   @include media(lg)
     margin-bottom: 100px
+    +bgIcon('promo/promo-bg_768.svg')
   @include media(xs)
     margin-bottom: 72px
+    +bgIcon('promo/promo-bg_360.svg')
 
 .promo__cont
+  overflow: hidden
+  position: relative
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    width: 100%
+    height: 727px
+    +bgIcon('promo/promo-stars.png')
+    @include media(lg)
+      +bgIcon('promo/promo-stars_768.png')
+      height: 547px
+    @include media(xs)
+      content: none
 
 .promo__wrap
   display: flex
   justify-content: space-between
+  padding: 72px 0
+  @include media(lg)
+    padding: 48px 0 50px
   @include media(xs)
     display: block
+    padding: 48px 0
 
 .promo__box
+  margin-top: 81px
   max-width: 526px
   width: 100%
   @include media(lg)
+    margin-top: 0
     max-width: 308px
   @include media(xs)
     margin-bottom: 44px
+    max-width: 100%
 
 .promo__title
   margin-bottom: 28px
@@ -43,11 +70,27 @@
     max-width: 348px
 
 .promo__slider
+  overflow: hidden
+
+.promo__line
+  margin-bottom: 12px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  @include media(lg)
+    margin-bottom: 8px
+  @include media(xs)
+    margin-bottom: 10px
 
 .promo__nav
+  flex-shrink: 0
   width: 44px
   height: 54px
+  transition-duration: $transition-duration
+  transition-property: background
   +bgIcon('ic_promo_nav_left.svg')
+  &:hover
+    +bgIcon('ic_promo_nav_left_hover.svg')
 
 .promo__nav_left
 
@@ -55,24 +98,39 @@
   transform: rotate(180deg)
 
 .promo__tabs
+  margin: 0 8px
+  flex-grow: 1
   padding: 7px 8px 8px
   display: flex
+  justify-content: space-around
   gap: 8px
   +bgIcon('promo/promo-tabs-bg.svg')
+  @include media(lg)
+    margin: 0 4px
+    gap: 4px
+    padding: 5px 4px
+  @include media(xs)
+    margin: 0
+    gap: 0
 
 .promo__tab
   padding: 16px 28px
   color: #ffffff
-  transition-property: color
+  line-height: 22px
+  +bgIcon('promo/promo-tabs-bg.svg')
+  transition-property: background
   transition-duration: $transition-duration
   &:hover
-    color: #B492FF
+    +bgIcon('promo/promo-tab-bg-hover.svg')
+  @include media(lg)
+    padding: 10px 15px
+    line-height: 18px
 
 .promo__tab_active
   +bgIcon('promo/promo-tab-bg.svg')
   cursor: default
   &:hover
-    color: #ffffff
+    +bgIcon('promo/promo-tab-bg.svg')
 
 .promo__wrapper
 

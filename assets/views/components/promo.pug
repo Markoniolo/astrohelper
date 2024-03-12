@@ -15,19 +15,21 @@ section.promo
           с интересующим вас людьми сразу по пяти параметрам или просканируйте линии на ладони, и они сами расскажут
           о том, какую Судьбу уготовили вам звёзды!
       .promo__area
-        .promo__slider
-          button.promo__nav.promo__nav_left
-          .promo__tabs
-            button.promo__tab.text месяц
-            button.promo__tab.promo__tab_active.text полгода
-            button.promo__tab.text год
-          button.promo__nav.promo__nav_right
+        .promo__slider(data-element="promo-slider")
+          .promo__line
+            button.promo__nav.promo__nav_left
+            .promo__tabs
+              button.promo__tab.text(data-element="promo-tab" data-id=0) месяц
+              button.promo__tab.promo__tab_active.text(data-element="promo-tab" data-id=1) полгода
+              button.promo__tab.text(data-element="promo-tab" data-id=2) год
+            button.promo__nav.promo__nav_right
           .promo__wrapper.swiper-wrapper
-            .promo__slide.swiper-slide
-              .promo__headline.h3 Полгода
-              .promo__descr.text.
-                Раскройте все секреты и потаённые уголки собственной карты рождения, проверяйте совместимость
-                с интересующим вас людьми без ограничений
-              .promo__price.h3 1 499 ₽
-              .promo__note.text всего 250 рублей в месяц
-              button.promo__button.btn.btn_green Купить промокод
+            each item, index in [{headline: 'Месяц',price: '500 ₽'},{headline: 'Полгода',price: '1 499 ₽'},{headline: 'Год',price: '5 000 ₽'}]
+              .promo__slide.swiper-slide
+                .promo__headline.h3= item.headline
+                .promo__descr.text.
+                  Раскройте все секреты и потаённые уголки собственной карты рождения, проверяйте совместимость
+                  с интересующим вас людьми без ограничений
+                .promo__price.h3= item.price
+                .promo__note.text всего 250 рублей в месяц
+                button.promo__button.btn.btn_green Купить промокод

@@ -1,9 +1,9 @@
 section.cap
   .cap__cont.cont
     .cap__area
-      h1.cap__title.title!= 'Выберите лучший билет в мир <span class="purple">TestProject</span>!'
+      h1.cap__title.h1!= 'Выберите лучший билет в мир <span class="purple">AstroStar</span>!'
       .cap__text
-        span.purple Промокоды TestProject
+        span.purple Промокоды AstroStar
         |
         | – ваш билет на VIP-места в увлекательном путешествии по миру астрологии и эзотерики!
       .cap__button-box
@@ -18,7 +18,7 @@ section.cap
         source(srcset=staticImg(`cap/cap-1_657.webp`))
         img.cap__image(src=staticImg('cap/cap-1_657.png') alt='')
       .cap__apps
-        a.cap__app(href="#")
+        a.cap__app(href="#" target='_blank')
           img.cap__app-icon(src=staticImg('ic_app_store.svg') alt='')
-        a.cap__app(href="#")
+        a.cap__app(href="#" target='_blank')
           img.cap__app-icon(src=staticImg('ic_google_app.svg') alt='')

@@ -1,0 +1,217 @@
+.footer
+  overflow: hidden
+  position: relative
+  z-index: 1
+  padding: 50px 0 26px
+  +bgIcon('footer/footer-bg.svg')
+  @include media(lg)
+    padding: 30px 0 16px
+    +bgIcon('footer/footer-bg_768.svg')
+  @include media(xs)
+    padding: 40px 0 16px
+    +bgIcon('footer/footer-bg_360.svg')
+
+.footer__cont
+
+.footer__top
+  position: relative
+  min-height: 160px
+  margin-bottom: 40px
+  @include media(lg)
+    min-height: 175px
+    margin-bottom: 26px
+  @include media(xs)
+    padding-bottom: 58px
+    margin-bottom: 16px
+
+.footer__area
+
+.footer__logo-box
+  display: flex
+  align-items: center
+  margin-bottom: 32px
+  @include media(lg)
+    margin-bottom: 30px
+  @include media(xs)
+    margin-bottom: 32px
+
+.footer__logo
+  flex-shrink: 0
+  margin-right: 28px
+  width: 122px
+  @include media(lg)
+    margin-right: 24px
+    width: 111px
+  @include media(xs)
+    margin-right: 20px
+    width: 84px
+
+.footer__logo-image
+  height: 44px
+  @include media(lg)
+    height: 40px
+  @include media(xs)
+    height: 30px
+
+.footer__logo-span
+  color: #c1adf4
+  max-width: 315px
+  width: 100%
+  @include media(lg)
+    max-width: 260px
+  @include media(xs)
+    max-width: 220px
+
+.footer__apps
+  display: flex
+  gap: 16px
+  @include media(lg)
+    gap: 8px
+    flex-direction: column
+  @include media(xs)
+    gap: 12px
+    flex-direction: row
+    margin-bottom: 40px
+
+.footer__app
+  display: flex
+  align-items: center
+  width: 180px
+  height: 62px
+  background-color: #290960
+  border-radius: 8px
+  transition-duration: $transition-duration
+  transition-property: background-color
+  &:hover
+    background-color: #34147A
+  @include media(lg)
+    border-radius: 6px
+    width: 144px
+    height: 44px
+  @include media(xs)
+    height: 54px
+    width: calc(50% - 6px)
+
+.footer__app-icon
+
+.footer__app-icon
+
+.footer__menu
+  position: absolute
+  top: 4px
+  left: 660px
+  @include media(lg)
+    top: 55px
+    left: 280px
+  @include media(xs)
+    position: static
+
+.footer__list
+  display: flex
+  flex-direction: column
+  gap: 4px
+
+.footer__item
+
+.footer__link
+  display: block
+  padding: 12px
+  @include media(lg)
+    padding: 8px
+  @include media(xs)
+    padding: 4px
+
+.footer__pay
+  display: flex
+  align-items: center
+  position: absolute
+  top: 14px
+  right: 0
+  gap: 24px
+  @include media(lg)
+    top: 8px
+    gap: 16px
+  @include media(xs)
+    top: unset
+    bottom: 0
+    left: 0
+    right: 0
+    gap: 8px
+    justify-content: space-between
+
+.footer__pay-icon
+  width: auto
+
+.footer__btn
+  position: absolute
+  bottom: 0
+  right: 0
+  display: flex
+  align-items: center
+  text-decoration: none
+  &:hover
+    .footer__btn-icon
+      +bgIcon('ic_nav_arrow_bg_hover.svg')
+  @include media(lg)
+    bottom: -5px
+  @include media(xs)
+    bottom: 50px
+
+.footer__btn-text
+  margin-right: 18px
+  @include media(lg)
+    margin-right: 16px
+  @include media(xs)
+    margin-right: 20px
+
+.footer__btn-icon
+  width: 42px
+  height: 42px
+  display: flex
+  align-items: center
+  justify-content: center
+  +bgIcon('ic_nav_arrow_bg.svg')
+  transform: rotate(-90deg)
+  transition-duration: $transition-duration
+  transition-property: background
+  &::before
+    content: ''
+    width: 16px
+    height: 12px
+    +bgIcon('ic_nav_arrow_right.svg')
+
+.footer__bottom
+  position: relative
+  display: flex
+  padding-top: 26px
+  @include media(lg)
+    padding-top: 16px
+  @include media(xs)
+    flex-wrap: wrap
+  &::before
+    content: ''
+    background-color: #341765
+    width: 100vw
+    height: 1px
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+
+.footer__copyright
+  color: #826ea4
+  @include media(xs)
+    width: 100%
+    margin-bottom: 12px
+
+.footer__email
+  margin-left: auto
+  @include media(xs)
+    margin-left: 0
+
+.footer__policy
+  margin-left: 76px
+  @include media(lg)
+    margin-left: 44px
+  @include media(xs)
+    margin-left: auto

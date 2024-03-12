@@ -1,0 +1,35 @@
+-
+  const footerList = [
+    { text: 'О приложении', href: '#about' },
+    { text: 'Тарифы', href: '#rates' },
+    { text: 'Вопросы и ответы', href: '#faq' },
+  ]
+
+footer.footer
+  .footer__cont.cont
+    .footer__top
+      .footer__area
+        .footer__logo-box
+          .footer__logo
+            img.footer__logo-image(src=staticImg('logo.svg') alt='')
+          .footer__logo-span.text-small Просто укажите дату рождения и получайте бесплатные гороскопы на каждый день!
+        .footer__apps
+          a.footer__app(href="#" target='_blank')
+            img.footer__app-icon(src=staticImg('ic_app_store.svg') alt='')
+          a.footer__app(href="#" target='_blank')
+            img.footer__app-icon(src=staticImg('ic_google_app.svg') alt='')
+      nav.footer__menu
+        ul.footer__list
+          each item in footerList
+            li.footer__item
+              a.footer__link.link-white.text(href=item.href data-role="scroll-to-anchor")= item.text
+      .footer__pay
+        each item in ['ic_pay_1','ic_pay_2','ic_pay_3','ic_pay_4']
+          img.footer__pay-icon(src=staticImg(`${item}.svg`) alt='')
+      a.footer__btn(href='#body' data-role="scroll-to-anchor")
+        .footer__btn-text.text Наверх
+        .footer__btn-icon
+    .footer__bottom
+      .footer__copyright.text-small © AstroStar 2024. Все права защищены!
+      a.footer__email.text-small.link-purple(href='mailto:astrostar@mail.ru') astrostar@mail.ru
+      a.footer__policy.text-small.link-purple(href='/policy.html' target='_blank') Политика конфиденциальности

@@ -2,22 +2,37 @@
   position: sticky
   top: 0
   z-index: 10
-  padding: 28px 0
-  transition-duration: $transition-duration
-  transition-property: background
+  padding: 16px 0 18px
   @include media(lg)
-    padding: 25px 0
+    padding: 14px 0 18px
   @include media(xs)
-    padding: 0
+    padding: 0 0 11px
+  &::before
+    content: ''
+    position: absolute
+    z-index: -1
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    opacity: 0
+    transition-duration: $transition-duration
+    transition-property: opacity
+    +bgIcon('header/header-bg.svg')
+    @include media(lg)
+      +bgIcon('header/header-bg_768.svg')
+    @include media(xs)
+      +bgIcon('header/header-bg_360.svg')
 
 .header_scroll
   padding: 16px 0 18px
-  background: rgba(25, 4, 60, 0.6)
   backdrop-filter: blur(30px)
   @include media(lg)
     padding: 14px 0 18px
   @include media(xs)
     padding: 0 0 11px
+  &::before
+    opacity: 1
 
 .header_mob-menu-open
   .header__burger
@@ -86,16 +101,11 @@
 .header__link
   display: block
   padding: 12px
-  text-decoration: none
   font-size: 20px
   line-height: 22px
-  transition-property: color
-  transition-duration: $transition-duration
   @include media(lg)
     padding: 8px
     font-size: 14px
-  &:hover
-    color: #b492ff
 
 .header__button
   @include media(lg)

@@ -34,7 +34,7 @@
   <meta property="og:title" content="Astrohelper" />
 </head>
 
-<body>
+<body id="body">
   <header class="header" data-element="header">
     <div class="header__cont cont">
       <div class="header__area">
@@ -44,13 +44,13 @@
         <nav class="header__menu">
           <ul class="header__list">
             <li class="header__item">
-              <a class="header__link link-white" href="#">О приложении</a>
+              <a class="header__link link-white" href="#about" data-role="scroll-to-anchor">О приложении</a>
             </li>
             <li class="header__item">
-              <a class="header__link link-white" href="#">Тарифы</a>
+              <a class="header__link link-white" href="#rates" data-role="scroll-to-anchor">Тарифы</a>
             </li>
             <li class="header__item">
-              <a class="header__link link-white" href="#">Вопросы и ответы</a>
+              <a class="header__link link-white" href="#faq" data-role="scroll-to-anchor">Вопросы и ответы</a>
             </li>
           </ul>
         </nav>
@@ -59,39 +59,14 @@
       </div>
     </div>
   </header>
-  <div class="cap-bg">
-    <picture class="cap-bg__left">
-      <source srcset="statics/img/cap-bg/cap-bg-left_197.png" media="(max-width: 768px)">
-      <source srcset="statics/img/cap-bg/cap-bg-left_411.png" media="(max-width: 1439px)">
-      <img class="cap-bg__left-image" src="statics/img/cap-bg/cap-bg-left.png" alt="">
-    </picture>
-    <picture class="cap-bg__right">
-      <source srcset="statics/img/cap-bg/cap-bg-right_133.png" media="(max-width: 768px)">
-      <source srcset="statics/img/cap-bg/cap-bg-right_321.png" media="(max-width: 1439px)">
-      <img class="cap-bg__right-image" src="statics/img/cap-bg/cap-bg-right.png" alt="">
-    </picture>
-    <div class="cap-bg__cont cont">
-      <picture class="cap-bg__stars">
-        <source srcset="statics/img/cap-bg/cap-bg-stars_320.png" media="(max-width: 1439px)">
-        <img class="cap-bg__stars-image" src="statics/img/cap-bg/cap-bg-stars.png" alt="">
-      </picture>
-    </div>
-  </div>
-  <div class="cap-bg__solar-wrap">
-    <div class="cap-bg__solar-cont cont">
-      <picture class="cap-bg__solar">
-        <source srcset="statics/img/cap-bg/cap-bg-solar_837.png" media="(max-width: 1439px)">
-        <img class="cap-bg__solar-image" src="statics/img/cap-bg/cap-bg-solar.png" alt="">
-      </picture>
-    </div>
-  </div>
+  <!--include cap-bg-->
   <main class="wrapper">
     <section class="cap">
       <div class="cap__cont cont">
         <div class="cap__area">
-          <h1 class="cap__title title">Выберите лучший билет в мир <span class="purple">TestProject</span>!</h1>
+          <h1 class="cap__title h1">Выберите лучший билет в мир <span class="purple">AstroStar</span>!</h1>
           <div class="cap__text">
-            <span class="purple">Промокоды TestProject</span>
+            <span class="purple">Промокоды AstroStar</span>
             – ваш билет на VIP-места в увлекательном путешествии по миру астрологии и эзотерики!
           </div>
           <div class="cap__button-box">
@@ -109,10 +84,10 @@
             <img class="cap__image" src="statics/img/cap/cap-1_657.png" alt="">
           </picture>
           <div class="cap__apps">
-            <a class="cap__app" href="#">
+            <a class="cap__app" href="#" target="_blank">
               <img class="cap__app-icon" src="statics/img/ic_app_store.svg" alt="">
             </a>
-            <a class="cap__app" href="#">
+            <a class="cap__app" href="#" target="_blank">
               <img class="cap__app-icon" src="statics/img/ic_google_app.svg" alt="">
             </a>
           </div>
@@ -154,7 +129,7 @@
             </div>
           </div>
           <div class="about__right">
-            <div class="about__box">
+            <div class="about__box" id="about">
               <h2 class="about__headline h2">О приложении</h2>
               <p class="about__text text">
                 Приложение AstroStar – это всегда актуальные персональные гороскопы на каждый день.
@@ -178,7 +153,7 @@
         </div>
       </div>
     </section>
-    <section class="rates">
+    <section class="rates" id="rates">
       <div class="rates__cont cont">
         <h2 class="rates__title h2">Не упустите звёздную удачу!</h2>
         <div class="rates__subtitle text">Пришло время раскрыть все секреты и потаённые уголки собственной натальной карты!</div>
@@ -250,15 +225,27 @@
             </p>
           </div>
           <div class="promo__area">
-            <div class="promo__slider">
-              <button class="promo__nav promo__nav_left"></button>
-              <div class="promo__tabs">
-                <button class="promo__tab text">месяц</button>
-                <button class="promo__tab promo__tab_active text">полгода</button>
-                <button class="promo__tab text">год</button>
+            <div class="promo__slider" data-element="promo-slider">
+              <div class="promo__line">
+                <button class="promo__nav promo__nav_left"></button>
+                <div class="promo__tabs">
+                  <button class="promo__tab text" data-element="promo-tab" data-id="0">месяц</button>
+                  <button class="promo__tab promo__tab_active text" data-element="promo-tab" data-id="1">полгода</button>
+                  <button class="promo__tab text" data-element="promo-tab" data-id="2">год</button>
+                </div>
+                <button class="promo__nav promo__nav_right"></button>
               </div>
-              <button class="promo__nav promo__nav_right"></button>
               <div class="promo__wrapper swiper-wrapper">
+                <div class="promo__slide swiper-slide">
+                  <div class="promo__headline h3">Месяц</div>
+                  <div class="promo__descr text">
+                    Раскройте все секреты и потаённые уголки собственной карты рождения, проверяйте совместимость
+                    с интересующим вас людьми без ограничений
+                  </div>
+                  <div class="promo__price h3">500 ₽</div>
+                  <div class="promo__note text">всего 250 рублей в месяц</div>
+                  <button class="promo__button btn btn_green">Купить промокод</button>
+                </div>
                 <div class="promo__slide swiper-slide">
                   <div class="promo__headline h3">Полгода</div>
                   <div class="promo__descr text">
@@ -269,13 +256,117 @@
                   <div class="promo__note text">всего 250 рублей в месяц</div>
                   <button class="promo__button btn btn_green">Купить промокод</button>
                 </div>
+                <div class="promo__slide swiper-slide">
+                  <div class="promo__headline h3">Год</div>
+                  <div class="promo__descr text">
+                    Раскройте все секреты и потаённые уголки собственной карты рождения, проверяйте совместимость
+                    с интересующим вас людьми без ограничений
+                  </div>
+                  <div class="promo__price h3">5 000 ₽</div>
+                  <div class="promo__note text">всего 250 рублей в месяц</div>
+                  <button class="promo__button btn btn_green">Купить промокод</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section class="faq" id="faq">
+      <div class="faq__cont cont">
+        <div class="faq__wrap">
+          <h2 class="faq__title h2">Вопросы и ответы</h2>
+          <div class="faq__box faq__box_active">
+            <div class="faq__top h4" data-element="faq-top">Как получить промокод?</div>
+            <div class="faq__content text">
+              Вы выбираете желаемый период действия промокода: месяц, полгода или год, оплачиваете заказ удобным
+              способом и сразу же получаете свой промокод в виде письма или СМС.
+            </div>
+          </div>
+          <div class="faq__box">
+            <div class="faq__top h4" data-element="faq-top">Как работают промокоды?</div>
+            <div class="faq__content text">
+              Вы выбираете желаемый период действия промокода: месяц, полгода или год, оплачиваете заказ удобным
+              способом и сразу же получаете свой промокод в виде письма или СМС.
+            </div>
+          </div>
+          <div class="faq__box">
+            <div class="faq__top h4" data-element="faq-top">Что будет, если не использовать промокод сразу после покупки?</div>
+            <div class="faq__content text">
+              Вы выбираете желаемый период действия промокода: месяц, полгода или год, оплачиваете заказ удобным
+              способом и сразу же получаете свой промокод в виде письма или СМС.
+            </div>
+          </div>
+          <div class="faq__box">
+            <div class="faq__top h4" data-element="faq-top">Могу ли я приобрести промокод в подарок?</div>
+            <div class="faq__content text">
+              Вы выбираете желаемый период действия промокода: месяц, полгода или год, оплачиваете заказ удобным
+              способом и сразу же получаете свой промокод в виде письма или СМС.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="order">
+      <div class="order__cont cont">
+        <div class="order__area">
+          <h2 class="order__title h1">Узнай свою судьбу!</h2>
+          <p class="order__text text">Просто выберите подходящий промокод — и используйте все возможности вашего «карманного астролога»!</p>
+          <a class="order__button btn btn_green" href="#">Купить промокод</a>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="footer__cont cont">
+      <div class="footer__top">
+        <div class="footer__area">
+          <div class="footer__logo-box">
+            <div class="footer__logo">
+              <img class="footer__logo-image" src="statics/img/logo.svg" alt="">
+            </div>
+            <div class="footer__logo-span text-small">Просто укажите дату рождения и получайте бесплатные гороскопы на каждый день!</div>
+          </div>
+          <div class="footer__apps">
+            <a class="footer__app" href="#" target="_blank">
+              <img class="footer__app-icon" src="statics/img/ic_app_store.svg" alt="">
+            </a>
+            <a class="footer__app" href="#" target="_blank">
+              <img class="footer__app-icon" src="statics/img/ic_google_app.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <nav class="footer__menu">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link link-white text" href="#about" data-role="scroll-to-anchor">О приложении</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link link-white text" href="#rates" data-role="scroll-to-anchor">Тарифы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link link-white text" href="#faq" data-role="scroll-to-anchor">Вопросы и ответы</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__pay">
+          <img class="footer__pay-icon" src="statics/img/ic_pay_1.svg" alt="">
+          <img class="footer__pay-icon" src="statics/img/ic_pay_2.svg" alt="">
+          <img class="footer__pay-icon" src="statics/img/ic_pay_3.svg" alt="">
+          <img class="footer__pay-icon" src="statics/img/ic_pay_4.svg" alt="">
+        </div>
+        <a class="footer__btn" href="#body" data-role="scroll-to-anchor">
+          <div class="footer__btn-text text">Наверх</div>
+          <div class="footer__btn-icon"></div>
+        </a>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright text-small">© AstroStar 2024. Все права защищены!</div>
+        <a class="footer__email text-small link-purple" href="mailto:astrostar@mail.ru">astrostar@mail.ru</a>
+        <a class="footer__policy text-small link-purple" href="/policy.html" target="_blank">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
   <script src="statics/js/libs.js"></script>
   <script src="statics/js/app.js" async></script>
 </body>

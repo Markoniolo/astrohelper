@@ -9,6 +9,10 @@
 section.faq#faq
   .faq__cont.cont
     .faq__wrap
+      picture.faq__picture
+        source(srcset=staticImg('faq/faq-stars_245.png') media="(max-width: 767px)")
+        source(srcset=staticImg('faq/faq-stars_384.png') media="(max-width: 1439px)")
+        img.faq__image(src=staticImg('faq/faq-stars.png') alt='')
       h2.faq__title.h2 Вопросы и ответы
       each item, index in faqList
         .faq__box(class = index === 0 ? 'faq__box_active' : false)

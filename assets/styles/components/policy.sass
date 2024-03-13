@@ -1,0 +1,70 @@
+.policy
+  margin-top: 60px
+  margin-bottom: 80px
+  @include media(xs)
+    margin-top: 50px
+    margin-bottom: 60px
+
+.policy__cont
+
+.policy__wrap
+  max-width: 856px
+  width: 100%
+  margin: 0 auto
+
+.policy__content
+  margin-bottom: 40px
+  @include media(xs)
+    margin-bottom: 32px
+
+.policy__back
+  display: flex
+  align-items: center
+  text-decoration: none
+  margin-bottom: 40px
+  @include media(xs)
+    margin-bottom: 32px
+  &:hover
+    .policy__back-btn
+      +bgIcon('ic_nav_arrow_bg_hover.svg')
+
+.policy__back-btn
+  width: 42px
+  height: 42px
+  display: flex
+  align-items: center
+  justify-content: center
+  transform: scaleX(-1)
+  +bgIcon('ic_nav_arrow_bg.svg')
+  transition-duration: $transition-duration
+  transition-property: background
+  &::before
+    content: ''
+    width: 16px
+    height: 12px
+    +bgIcon('ic_nav_arrow_right.svg')
+
+.policy__back-note
+  margin-left: 16px
+  font-size: 16px
+
+.policy__title
+  margin-bottom: 28px
+  @include media(xs)
+    margin-bottom: 24px
+
+.policy__headline
+  margin-bottom: 20px
+  @include media(xs)
+    margin-bottom: 16px
+  &:not(:first-of-type)
+    margin-top: 40px
+    @include media(xs)
+      margin-top: 28px
+
+.policy__text
+  margin-bottom: 18px
+  @include media(xs)
+    margin-bottom: 12px
+
+.policy__button

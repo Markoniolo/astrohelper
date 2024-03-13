@@ -16,7 +16,7 @@
 .footer__top
   position: relative
   min-height: 160px
-  margin-bottom: 40px
+  margin-bottom: 30px
   @include media(lg)
     min-height: 175px
     margin-bottom: 26px
@@ -34,6 +34,12 @@
     margin-bottom: 30px
   @include media(xs)
     margin-bottom: 32px
+
+a.footer__logo
+  transition-property: opacity
+  transition-duration: $transition-duration
+  &:hover
+    opacity: 0.8
 
 .footer__logo
   flex-shrink: 0
@@ -98,8 +104,8 @@
 
 .footer__menu
   position: absolute
-  top: 4px
-  left: 660px
+  top: -2px
+  left: 648px
   @include media(lg)
     top: 55px
     left: 280px
@@ -109,12 +115,11 @@
 .footer__list
   display: flex
   flex-direction: column
-  gap: 4px
 
 .footer__item
 
 .footer__link
-  display: block
+  display: inline-block
   padding: 12px
   @include media(lg)
     padding: 8px
@@ -144,7 +149,7 @@
 
 .footer__btn
   position: absolute
-  bottom: 0
+  bottom: 20px
   right: 0
   display: flex
   align-items: center

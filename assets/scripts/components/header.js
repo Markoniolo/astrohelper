@@ -4,6 +4,7 @@ if (header) headerInit()
 
 function headerInit() {
   window.addEventListener('scroll', checkScroll)
+  checkScroll()
   document.addEventListener('click', closeMenu)
 
   const headerBurger = document.querySelector('[data-element="header__burger"]')

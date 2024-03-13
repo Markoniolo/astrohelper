@@ -7,9 +7,10 @@ html(lang='en')
   head
     include _head
     block head
-  body#body
+  body#body(class = `body_${VIEW}`)
     include header
-    //include cap-bg
+    if VIEW === 'index'
+      include cap-bg
     main.wrapper
       block body
     include footer

@@ -8,13 +8,20 @@
 header.header(data-element="header")
   .header__cont.cont
     .header__area
-      .header__logo
-        img.header__logo-image(src=staticImg('logo.svg') alt='')
+      if VIEW === 'index'
+        .header__logo
+          img.header__logo-image(src=staticImg('logo.svg') alt='')
+      else
+        a.header__logo(href='index.html')
+          img.header__logo-image(src=staticImg('logo.svg') alt='')
       nav.header__menu
         ul.header__list
           each item in headerList
             li.header__item
-              a.header__link.link-white(href=item.href data-role="scroll-to-anchor")= item.text
+              if VIEW === 'index'
+                a.header__link.link-white(href=item.href data-role="scroll-to-anchor")= item.text
+              else
+                a.header__link.link-white(href=`/index.html${item.href}`)= item.text
       a.header__button.btn.btn_blue(href='#') Купить промокод
       button.header__burger(type="button" data-element="header__burger")
 

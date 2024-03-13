@@ -1,3 +1,23 @@
+.body_index
+  +bgIcon('body/body-bg-index.png')
+  background-position: top
+  @include media(lg)
+    +bgIcon('body/body-bg-index_768.png')
+    background-position: top
+  @include media(xs)
+    +bgIcon('body/body-bg-index_360.png')
+    background-position: top
+
+.body_policy
+  +bgIcon('body/body-bg-policy.png')
+  background-position: top
+  @include media(lg)
+    +bgIcon('body/body-bg-policy_768.png')
+    background-position: top
+  @include media(xs)
+    +bgIcon('body/body-bg-policy_360.png')
+    background-position: top
+
 .wrapper
   position: relative
   z-index: 2

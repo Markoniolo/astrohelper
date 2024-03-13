@@ -34,7 +34,7 @@
   <meta property="og:title" content="Astrohelper" />
 </head>
 
-<body id="body">
+<body class="body_index" id="body">
   <header class="header" data-element="header">
     <div class="header__cont cont">
       <div class="header__area">
@@ -59,28 +59,45 @@
       </div>
     </div>
   </header>
-  <!--include cap-bg-->
+  <div class="cap-bg">
+    <div class="cap-bg__cont cont">
+      <picture class="cap-bg__stars">
+        <source srcset="statics/img/cap-bg/cap-bg-stars_320.png" media="(max-width: 1439px)">
+        <img class="cap-bg__stars-image" src="statics/img/cap-bg/cap-bg-stars.png" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="cap-bg__solar-wrap">
+    <div class="cap-bg__solar-cont cont">
+      <picture class="cap-bg__solar">
+        <source srcset="statics/img/cap-bg/cap-bg-solar_837.png" media="(max-width: 1439px)">
+        <img class="cap-bg__solar-image" src="statics/img/cap-bg/cap-bg-solar.png" alt="">
+      </picture>
+    </div>
+  </div>
   <main class="wrapper">
     <section class="cap">
       <div class="cap__cont cont">
         <div class="cap__area">
-          <h1 class="cap__title h1">Выберите лучший билет в мир <span class="purple">AstroStar</span>!</h1>
+          <h1 class="cap__title h1">Выберите лучший билет&nbsp;в&nbsp;мир <span class="purple">AstroStar</span>!</h1>
           <div class="cap__text">
             <span class="purple">Промокоды AstroStar</span>
             – ваш билет на VIP-места в увлекательном путешествии по миру астрологии и эзотерики!
           </div>
           <div class="cap__button-box">
             <picture class="cap__button-decor">
-              <source srcset="statics/img/cap/cap-button-decor_105.png" media="(max-width: 768px)">
+              <source srcset="statics/img/cap/cap-button-decor_105.png" media="(max-width: 767px)">
               <source srcset="statics/img/cap/cap-button-decor_131.png" media="(max-width: 1439px)">
               <img class="cap__button-decor-image" src="statics/img/cap/cap-button-decor_180.png" alt="">
             </picture>
             <a class="cap__button btn btn_green" href="#">Купить промокод</a>
           </div>
           <picture class="cap__picture">
-            <source srcset="statics/img/cap/cap-1_326.webp 1x, statics/img/cap/cap-1_652.webp 2x" type="image/webp" media="(max-width: 768px)">
+            <source srcset="statics/img/cap/cap-1_326.webp 1x, statics/img/cap/cap-1_652.webp 2x" type="image/webp" media="(max-width: 767px)">
             <source srcset="statics/img/cap/cap-1_447.webp" media="(max-width: 1439px)">
             <source srcset="statics/img/cap/cap-1_657.webp">
+            <source srcset="statics/img/cap/cap-1_326.png 1x, statics/img/cap/cap-1_652.png 2x" type="image/png" media="(max-width: 767px)">
+            <source srcset="statics/img/cap/cap-1_447.png" media="(max-width: 1439px)">
             <img class="cap__image" src="statics/img/cap/cap-1_657.png" alt="">
           </picture>
           <div class="cap__apps">
@@ -103,22 +120,42 @@
               <div class="about__wrapper swiper-wrapper">
                 <div class="about__slide swiper-slide">
                   <picture class="about__picture">
-                    <img class="about__image" src="https://via.placeholder.com/160x288" alt="" loading="lazy">
+                    <source srcset="statics/img/about/about-1_232.webp 1x, statics/img/about/about-1_464.webp 2x" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="statics/img/about/about-1_242.webp" type="image/webp" media="(max-width: 1439px)">
+                    <source srcset="statics/img/about/about-1.webp" type="image/webp">
+                    <source srcset="statics/img/about/about-1_232.png 1x, statics/img/about/about-1_464.png 2x" media="(max-width: 767px)">
+                    <source srcset="statics/img/about/about-1_242.png" media="(max-width: 1439px)">
+                    <img class="about__image" src="statics/img/about/about-1.png" alt="" loading="lazy">
                   </picture>
                 </div>
                 <div class="about__slide swiper-slide">
                   <picture class="about__picture">
-                    <img class="about__image" src="https://via.placeholder.com/160x288" alt="" loading="lazy">
+                    <source srcset="statics/img/about/about-2_232.webp 1x, statics/img/about/about-2_464.webp 2x" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="statics/img/about/about-2_242.webp" type="image/webp" media="(max-width: 1439px)">
+                    <source srcset="statics/img/about/about-2.webp" type="image/webp">
+                    <source srcset="statics/img/about/about-2_232.png 1x, statics/img/about/about-2_464.png 2x" media="(max-width: 767px)">
+                    <source srcset="statics/img/about/about-2_242.png" media="(max-width: 1439px)">
+                    <img class="about__image" src="statics/img/about/about-2.png" alt="" loading="lazy">
                   </picture>
                 </div>
                 <div class="about__slide swiper-slide">
                   <picture class="about__picture">
-                    <img class="about__image" src="https://via.placeholder.com/160x288" alt="" loading="lazy">
+                    <source srcset="statics/img/about/about-3_232.webp 1x, statics/img/about/about-3_464.webp 2x" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="statics/img/about/about-3_242.webp" type="image/webp" media="(max-width: 1439px)">
+                    <source srcset="statics/img/about/about-3.webp" type="image/webp">
+                    <source srcset="statics/img/about/about-3_232.png 1x, statics/img/about/about-3_464.png 2x" media="(max-width: 767px)">
+                    <source srcset="statics/img/about/about-3_242.png" media="(max-width: 1439px)">
+                    <img class="about__image" src="statics/img/about/about-3.png" alt="" loading="lazy">
                   </picture>
                 </div>
                 <div class="about__slide swiper-slide">
                   <picture class="about__picture">
-                    <img class="about__image" src="https://via.placeholder.com/160x288" alt="" loading="lazy">
+                    <source srcset="statics/img/about/about-4_232.webp 1x, statics/img/about/about-4_464.webp 2x" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="statics/img/about/about-4_242.webp" type="image/webp" media="(max-width: 1439px)">
+                    <source srcset="statics/img/about/about-4.webp" type="image/webp">
+                    <source srcset="statics/img/about/about-4_232.png 1x, statics/img/about/about-4_464.png 2x" media="(max-width: 767px)">
+                    <source srcset="statics/img/about/about-4_242.png" media="(max-width: 1439px)">
+                    <img class="about__image" src="statics/img/about/about-4.png" alt="" loading="lazy">
                   </picture>
                 </div>
               </div>
@@ -155,7 +192,7 @@
     </section>
     <section class="rates" id="rates">
       <div class="rates__cont cont">
-        <h2 class="rates__title h2">Не упустите звёздную удачу!</h2>
+        <h2 class="rates__title h2">Не упустите звёздную&nbsp;удачу!</h2>
         <div class="rates__subtitle text">Пришло время раскрыть все секреты и потаённые уголки собственной натальной карты!</div>
         <div class="rates__wrap">
           <div class="rates__area rates__area_left">
@@ -275,6 +312,11 @@
     <section class="faq" id="faq">
       <div class="faq__cont cont">
         <div class="faq__wrap">
+          <picture class="faq__picture">
+            <source srcset="statics/img/faq/faq-stars_245.png" media="(max-width: 767px)">
+            <source srcset="statics/img/faq/faq-stars_384.png" media="(max-width: 1439px)">
+            <img class="faq__image" src="statics/img/faq/faq-stars.png" alt="">
+          </picture>
           <h2 class="faq__title h2">Вопросы и ответы</h2>
           <div class="faq__box faq__box_active">
             <div class="faq__top h4" data-element="faq-top">Как получить промокод?</div>
@@ -363,7 +405,7 @@
       <div class="footer__bottom">
         <div class="footer__copyright text-small">© AstroStar 2024. Все права защищены!</div>
         <a class="footer__email text-small link-purple" href="mailto:astrostar@mail.ru">astrostar@mail.ru</a>
-        <a class="footer__policy text-small link-purple" href="/policy.html" target="_blank">Политика конфиденциальности</a>
+        <a class="footer__policy text-small link-purple" href="/policy.html">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>

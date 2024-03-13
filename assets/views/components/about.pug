@@ -5,18 +5,15 @@ section.about
         h3.about__title.h3 Астрологический прогноз
         .about__slider(data-element="about-slider")
           .about__wrapper.swiper-wrapper
-            .about__slide.swiper-slide
-              picture.about__picture
-                img.about__image(src='https://via.placeholder.com/160x288' alt='' loading='lazy')
-            .about__slide.swiper-slide
-              picture.about__picture
-                img.about__image(src='https://via.placeholder.com/160x288' alt='' loading='lazy')
-            .about__slide.swiper-slide
-              picture.about__picture
-                img.about__image(src='https://via.placeholder.com/160x288' alt='' loading='lazy')
-            .about__slide.swiper-slide
-              picture.about__picture
-                img.about__image(src='https://via.placeholder.com/160x288' alt='' loading='lazy')
+            each item in [1,2,3,4]
+              .about__slide.swiper-slide
+                picture.about__picture
+                  source(srcset=staticImg(`about/about-${item}_232.webp`) + " 1x, " + staticImg(`about/about-${item}_464.webp`) + " 2x" type="image/webp" media="(max-width: 767px)")
+                  source(srcset=staticImg(`about/about-${item}_242.webp`) type="image/webp" media="(max-width: 1439px)")
+                  source(srcset=staticImg(`about/about-${item}.webp`) type="image/webp")
+                  source(srcset=staticImg(`about/about-${item}_232.png`) + " 1x, " + staticImg(`about/about-${item}_464.png`) + " 2x" media="(max-width: 767px)")
+                  source(srcset=staticImg(`about/about-${item}_242.png`) media="(max-width: 1439px)")
+                  img.about__image(src=staticImg(`about/about-${item}.png`) alt='' loading='lazy')
           .about__slider-nav
             button.slider-nav-prev(type='button')
             button.slider-nav-next(type='button')

@@ -23,6 +23,7 @@
     line-height: 140%
 
 .rates__wrap
+  position: relative
   display: flex
   gap: 24px
   justify-content: center
@@ -31,6 +32,25 @@
   @include media(xs)
     flex-direction: column
     gap: 20px
+  &::before, &::after
+    content: ''
+    border-radius: 100%
+    position: absolute
+    animation: 3s radiantGreenGlow infinite linear
+    @include media(lg)
+      content: none
+  &::before
+    top: -169px
+    right: 211px
+    width: 603px
+    height: 603px
+    +bgIcon('rates/ic_rates_glow_left.svg')
+  &::after
+    bottom: -84px
+    right: -60px
+    width: 534px
+    height: 534px
+    +bgIcon('rates/ic_rates_glow_right.svg')
 
 .rates__area
   position: relative
@@ -140,9 +160,12 @@
     margin-bottom: 8px
   @include media(xs)
     margin-bottom: 4px
+    line-height: 110%
 
 .rates__value
   line-height: 110%
+  @include media(xs)
+    line-height: 110%
   &:not(:last-of-type)
     margin-bottom: 8px
     @include media(lg)

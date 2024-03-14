@@ -1,6 +1,22 @@
-section.order
+section.order.js-parallax-area
   .order__cont.cont
+    picture.order__zodiac-1(data-role="parallax-item" data-offset="20")
+      source(srcset=staticImg('order/order-zodiac-1.webp') type="image/webp" media="(max-width: 1439px)")
+      img.order__zodiac-1-img(src=staticImg('order/order-zodiac-1.png') alt='' loading='lazy')
+    picture.order__zodiac-2(data-role="parallax-item" data-offset="40")
+      source(srcset=staticImg('order/order-zodiac-2.webp') type="image/webp" media="(max-width: 1439px)")
+      img.order__zodiac-2-img(src=staticImg('order/order-zodiac-2.png') alt='' loading='lazy')
+    picture.order__zodiac-3(data-role="parallax-item" data-offset="20")
+      source(srcset=staticImg('order/order-zodiac-3.webp') type="image/webp" media="(max-width: 1439px)")
+      img.order__zodiac-3-img(src=staticImg('order/order-zodiac-3.png') alt='' loading='lazy')
+    .order__solar
+      picture.order__circle.animation-rotate
+        source(srcset=staticImg('order/order-circle_270.png') media="(max-width: 1439px)")
+        img.order__circle-img(src=staticImg('order/order-circle.png') alt='' loading='lazy')
+      picture.order__moon
+        source(srcset=staticImg('order/order-moon_130.png') media="(max-width: 1439px)")
+        img.order__moon-img(src=staticImg('order/order-moon.png') alt='' loading='lazy')
     .order__area
-      h2.order__title.h1 Узнай свою судьбу!
-      p.order__text.text Просто выберите подходящий промокод — и используйте все возможности вашего «карманного астролога»!
+      h2.order__title.h1.animation-fade Узнай свою судьбу!
+      p.order__text.text.animation-fade Просто выберите подходящий промокод — и используйте все возможности вашего «карманного астролога»!
       a.order__button.btn.btn_green(href='#') Купить промокод

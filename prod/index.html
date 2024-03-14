@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1.0">
-  <meta name="author" content="Mark">
+  <meta name="author" content="Astrohelper">
   <meta name="description" content="Astrohelper">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="preload" href="statics/fonts/Philosopher-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -59,54 +59,60 @@
       </div>
     </div>
   </header>
-  <div class="cap-bg">
-    <div class="cap-bg__cont cont">
-      <picture class="cap-bg__stars">
-        <source srcset="statics/img/cap-bg/cap-bg-stars_320.png" media="(max-width: 1439px)">
-        <img class="cap-bg__stars-image" src="statics/img/cap-bg/cap-bg-stars.png" alt="">
-      </picture>
-    </div>
-  </div>
-  <div class="cap-bg__solar-wrap">
-    <div class="cap-bg__solar-cont cont">
-      <picture class="cap-bg__solar">
-        <source srcset="statics/img/cap-bg/cap-bg-solar_837.png" media="(max-width: 1439px)">
-        <img class="cap-bg__solar-image" src="statics/img/cap-bg/cap-bg-solar.png" alt="">
-      </picture>
-    </div>
-  </div>
   <main class="wrapper">
     <section class="cap">
-      <div class="cap__cont cont">
-        <div class="cap__area">
-          <h1 class="cap__title h1">Выберите лучший билет&nbsp;в&nbsp;мир <span class="purple">AstroStar</span>!</h1>
-          <div class="cap__text">
-            <span class="purple">Промокоды AstroStar</span>
-            – ваш билет на VIP-места в увлекательном путешествии по миру астрологии и эзотерики!
-          </div>
-          <div class="cap__button-box">
-            <picture class="cap__button-decor">
-              <source srcset="statics/img/cap/cap-button-decor_105.png" media="(max-width: 767px)">
-              <source srcset="statics/img/cap/cap-button-decor_131.png" media="(max-width: 1439px)">
-              <img class="cap__button-decor-image" src="statics/img/cap/cap-button-decor_180.png" alt="">
-            </picture>
-            <a class="cap__button btn btn_green" href="#">Купить промокод</a>
-          </div>
-          <picture class="cap__picture">
-            <source srcset="statics/img/cap/cap-1_326.webp 1x, statics/img/cap/cap-1_652.webp 2x" type="image/webp" media="(max-width: 767px)">
-            <source srcset="statics/img/cap/cap-1_447.webp" media="(max-width: 1439px)">
-            <source srcset="statics/img/cap/cap-1_657.webp">
-            <source srcset="statics/img/cap/cap-1_326.png 1x, statics/img/cap/cap-1_652.png 2x" type="image/png" media="(max-width: 767px)">
-            <source srcset="statics/img/cap/cap-1_447.png" media="(max-width: 1439px)">
-            <img class="cap__image" src="statics/img/cap/cap-1_657.png" alt="">
+      <div class="cap-bg">
+        <div class="cap-bg__cont cont">
+          <picture class="cap-bg__stars">
+            <source srcset="statics/img/cap/cap-bg-stars_320.png" media="(max-width: 1439px)">
+            <img class="cap-bg__stars-image" src="statics/img/cap/cap-bg-stars.png" alt="">
           </picture>
-          <div class="cap__apps">
-            <a class="cap__app" href="#" target="_blank">
-              <img class="cap__app-icon" src="statics/img/ic_app_store.svg" alt="">
-            </a>
-            <a class="cap__app" href="#" target="_blank">
-              <img class="cap__app-icon" src="statics/img/ic_google_app.svg" alt="">
-            </a>
+        </div>
+      </div>
+      <div class="cap-bg__solar-wrap">
+        <div class="cap-bg__solar-cont cont">
+          <picture class="cap-bg__solar">
+            <source srcset="statics/img/cap/cap-bg-solar_837.png" media="(max-width: 1439px)">
+            <img class="cap-bg__solar-image" src="statics/img/cap/cap-bg-solar.png" alt="">
+          </picture>
+          <picture class="cap-bg__solar-decor animation-rotate">
+            <source srcset="statics/img/cap/cap-bg-solar-decor_184.png" media="(max-width: 1439px)">
+            <img class="cap-bg__solar-decor-image" src="statics/img/cap/cap-bg-solar-decor.png" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="cap__wrap js-parallax-area">
+        <div class="cap__cont cont">
+          <div class="cap__area">
+            <h1 class="cap__title h1 animation-fade">Выберите лучший билет&nbsp;в&nbsp;мир <span class="purple">AstroStar</span>!</h1>
+            <div class="cap__text animation-fade">
+              <span class="purple">Промокоды AstroStar</span>
+              – ваш билет на VIP-места в увлекательном путешествии по миру астрологии и эзотерики!
+            </div>
+            <div class="cap__button-box">
+              <picture class="cap__button-decor animation-rotate">
+                <source srcset="statics/img/buttons/button-green-solar_135.png" media="(max-width: 767px)">
+                <source srcset="statics/img/buttons/button-green-solar_165.png" media="(max-width: 1439px)">
+                <img class="cap__button-decor-image" src="statics/img/buttons/button-green-solar.png" alt="">
+              </picture>
+              <a class="cap__button btn btn_green" href="#">Купить промокод</a>
+            </div>
+            <picture class="cap__picture" data-role="parallax-item" data-offset="20">
+              <source srcset="statics/img/cap/cap-1_326.webp 1x, statics/img/cap/cap-1_652.webp 2x" type="image/webp" media="(max-width: 767px)">
+              <source srcset="statics/img/cap/cap-1_447.webp" type="image/webp" media="(max-width: 1439px)">
+              <source srcset="statics/img/cap/cap-1_657.webp" type="image/webp">
+              <source srcset="statics/img/cap/cap-1_326.png 1x, statics/img/cap/cap-1_652.png 2x" type="image/png" media="(max-width: 767px)">
+              <source srcset="statics/img/cap/cap-1_447.png" media="(max-width: 1439px)">
+              <img class="cap__image" src="statics/img/cap/cap-1_657.png" alt="">
+            </picture>
+            <div class="cap__apps">
+              <a class="cap__app" href="#" target="_blank">
+                <img class="cap__app-icon" src="statics/img/ic_app_store.svg" alt="">
+              </a>
+              <a class="cap__app" href="#" target="_blank">
+                <img class="cap__app-icon" src="statics/img/ic_google_app.svg" alt="">
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -115,7 +121,7 @@
       <div class="about__cont cont">
         <div class="about__area">
           <div class="about__left">
-            <h3 class="about__title h3">Астрологический прогноз</h3>
+            <h3 class="about__title h3 animation-fade">Астрологический прогноз</h3>
             <div class="about__slider" data-element="about-slider">
               <div class="about__wrapper swiper-wrapper">
                 <div class="about__slide swiper-slide">
@@ -167,19 +173,19 @@
           </div>
           <div class="about__right">
             <div class="about__box" id="about">
-              <h2 class="about__headline h2">О приложении</h2>
-              <p class="about__text text">
+              <h2 class="about__headline h2 animation-fade">О приложении</h2>
+              <p class="about__text text animation-fade">
                 Приложение AstroStar – это всегда актуальные персональные гороскопы на каждый день.
                 А специальный
                 <span class="blue">промокод</span>
                 превращает его в полноценного персонального астролога!
               </p>
-              <p class="about__text text">
+              <p class="about__text text animation-fade">
                 Добавьте к прогнозу на день или два гороскоп на неделю и даже на целый месяц! Прочтите, какие тайны
                 скрывают линии на вашей ладони, проверьте совместимость с любым человеком и заранее узнавайте обо всех
                 самых важных и влияющих на вас звёздных аспектах.
               </p>
-              <p class="about__text text">
+              <p class="about__text text animation-fade">
                 Просто выбирайте
                 <span class="blue">промокод</span>
                 , который подходит именно вам — на месяц, полгода или целый год. Пришло время
@@ -192,8 +198,8 @@
     </section>
     <section class="rates" id="rates">
       <div class="rates__cont cont">
-        <h2 class="rates__title h2">Не упустите звёздную&nbsp;удачу!</h2>
-        <div class="rates__subtitle text">Пришло время раскрыть все секреты и потаённые уголки собственной натальной карты!</div>
+        <h2 class="rates__title h2 animation-fade">Не упустите звёздную&nbsp;удачу!</h2>
+        <div class="rates__subtitle text animation-fade">Пришло время раскрыть все секреты и потаённые уголки собственной натальной карты!</div>
         <div class="rates__wrap">
           <div class="rates__area rates__area_left">
             <h3 class="rates__headline h3">Без промокода</h3>
@@ -248,14 +254,14 @@
       <div class="promo__cont cont">
         <div class="promo__wrap">
           <div class="promo__box">
-            <h2 class="promo__title h2">Приобрести промокод</h2>
-            <p class="promo__text text">
+            <h2 class="promo__title h2 animation-fade">Приобрести промокод</h2>
+            <p class="promo__text text animation-fade">
               Что это будет? Месячный отпуск, большое погружение на полгода или настоящая «релокация» в увлекательный
               и загадочный мир астрологии сроком на целый год? Решать вам, но что бы вы ни выбрали,
               <span class="blue">AstroStar</span>
               раскроет максимум информации о том, какую Судьбу готовят вам звёзды!
             </p>
-            <p class="promo__text text">
+            <p class="promo__text text animation-fade">
               Раскройте все секреты и потаённые уголки собственной карты рождения, проверяйте совместимость
               с интересующим вас людьми сразу по пяти параметрам или просканируйте линии на ладони, и они сами расскажут
               о том, какую Судьбу уготовили вам звёзды!
@@ -266,6 +272,7 @@
               <div class="promo__line">
                 <button class="promo__nav promo__nav_left"></button>
                 <div class="promo__tabs">
+                  <div class="promo__highlight" data-element="promo-highlight"></div>
                   <button class="promo__tab text" data-element="promo-tab" data-id="0">месяц</button>
                   <button class="promo__tab promo__tab_active text" data-element="promo-tab" data-id="1">полгода</button>
                   <button class="promo__tab text" data-element="promo-tab" data-id="2">год</button>
@@ -281,7 +288,14 @@
                   </div>
                   <div class="promo__price h3">500 ₽</div>
                   <div class="promo__note text">всего 250 рублей в месяц</div>
-                  <button class="promo__button btn btn_green">Купить промокод</button>
+                  <div class="promo__button-box">
+                    <picture class="promo__button-decor animation-rotate">
+                      <source srcset="statics/img/buttons/button-green-solar_135.png" media="(max-width: 767px)">
+                      <source srcset="statics/img/buttons/button-green-solar_165.png" media="(max-width: 1439px)">
+                      <img class="promo__button-decor-image" src="statics/img/buttons/button-green-solar.png" alt="">
+                    </picture>
+                    <a class="promo__button btn btn_green">Купить промокод</a>
+                  </div>
                 </div>
                 <div class="promo__slide swiper-slide">
                   <div class="promo__headline h3">Полгода</div>
@@ -291,7 +305,14 @@
                   </div>
                   <div class="promo__price h3">1 499 ₽</div>
                   <div class="promo__note text">всего 250 рублей в месяц</div>
-                  <button class="promo__button btn btn_green">Купить промокод</button>
+                  <div class="promo__button-box">
+                    <picture class="promo__button-decor animation-rotate">
+                      <source srcset="statics/img/buttons/button-green-solar_135.png" media="(max-width: 767px)">
+                      <source srcset="statics/img/buttons/button-green-solar_165.png" media="(max-width: 1439px)">
+                      <img class="promo__button-decor-image" src="statics/img/buttons/button-green-solar.png" alt="">
+                    </picture>
+                    <a class="promo__button btn btn_green">Купить промокод</a>
+                  </div>
                 </div>
                 <div class="promo__slide swiper-slide">
                   <div class="promo__headline h3">Год</div>
@@ -301,7 +322,14 @@
                   </div>
                   <div class="promo__price h3">5 000 ₽</div>
                   <div class="promo__note text">всего 250 рублей в месяц</div>
-                  <button class="promo__button btn btn_green">Купить промокод</button>
+                  <div class="promo__button-box">
+                    <picture class="promo__button-decor animation-rotate">
+                      <source srcset="statics/img/buttons/button-green-solar_135.png" media="(max-width: 767px)">
+                      <source srcset="statics/img/buttons/button-green-solar_165.png" media="(max-width: 1439px)">
+                      <img class="promo__button-decor-image" src="statics/img/buttons/button-green-solar.png" alt="">
+                    </picture>
+                    <a class="promo__button btn btn_green">Купить промокод</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -317,7 +345,7 @@
             <source srcset="statics/img/faq/faq-stars_384.png" media="(max-width: 1439px)">
             <img class="faq__image" src="statics/img/faq/faq-stars.png" alt="">
           </picture>
-          <h2 class="faq__title h2">Вопросы и ответы</h2>
+          <h2 class="faq__title h2 animation-fade">Вопросы и ответы</h2>
           <div class="faq__box faq__box_active">
             <div class="faq__top h4" data-element="faq-top">Как получить промокод?</div>
             <div class="faq__content text">
@@ -349,11 +377,33 @@
         </div>
       </div>
     </section>
-    <section class="order">
+    <section class="order js-parallax-area">
       <div class="order__cont cont">
+        <picture class="order__zodiac-1" data-role="parallax-item" data-offset="20">
+          <source srcset="statics/img/order/order-zodiac-1.webp" type="image/webp" media="(max-width: 1439px)">
+          <img class="order__zodiac-1-img" src="statics/img/order/order-zodiac-1.png" alt="" loading="lazy">
+        </picture>
+        <picture class="order__zodiac-2" data-role="parallax-item" data-offset="40">
+          <source srcset="statics/img/order/order-zodiac-2.webp" type="image/webp" media="(max-width: 1439px)">
+          <img class="order__zodiac-2-img" src="statics/img/order/order-zodiac-2.png" alt="" loading="lazy">
+        </picture>
+        <picture class="order__zodiac-3" data-role="parallax-item" data-offset="20">
+          <source srcset="statics/img/order/order-zodiac-3.webp" type="image/webp" media="(max-width: 1439px)">
+          <img class="order__zodiac-3-img" src="statics/img/order/order-zodiac-3.png" alt="" loading="lazy">
+        </picture>
+        <div class="order__solar">
+          <picture class="order__circle animation-rotate">
+            <source srcset="statics/img/order/order-circle_270.png" media="(max-width: 1439px)">
+            <img class="order__circle-img" src="statics/img/order/order-circle.png" alt="" loading="lazy">
+          </picture>
+          <picture class="order__moon">
+            <source srcset="statics/img/order/order-moon_130.png" media="(max-width: 1439px)">
+            <img class="order__moon-img" src="statics/img/order/order-moon.png" alt="" loading="lazy">
+          </picture>
+        </div>
         <div class="order__area">
-          <h2 class="order__title h1">Узнай свою судьбу!</h2>
-          <p class="order__text text">Просто выберите подходящий промокод — и используйте все возможности вашего «карманного астролога»!</p>
+          <h2 class="order__title h1 animation-fade">Узнай свою судьбу!</h2>
+          <p class="order__text text animation-fade">Просто выберите подходящий промокод — и используйте все возможности вашего «карманного астролога»!</p>
           <a class="order__button btn btn_green" href="#">Купить промокод</a>
         </div>
       </div>

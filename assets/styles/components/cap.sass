@@ -1,4 +1,71 @@
-.cap
+.cap-bg
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: -1
+
+.cap-bg__cont
+  position: relative
+
+.cap-bg__stars
+  position: absolute
+  top: 71px
+  left: 72px
+  width: 526px
+  height: 748px
+  @include media(lg)
+    left: 39px
+    width: 320px
+    height: 466px
+  @include media(xs)
+    display: none
+
+.cap-bg__stars-image
+
+.cap-bg__solar-wrap
+  overflow: hidden
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1
+  height: 1500px
+  @include media(xs)
+    display: none
+
+.cap-bg__solar-cont
+  position: relative
+
+.cap-bg__solar
+  position: absolute
+  top: -460px
+  right: -875px
+  width: 1885px
+  height: 1886px
+  @include media(lg)
+    width: 837px
+    height: 970px
+    top: -98px
+    right: -350px
+
+.cap-bg__solar-image
+
+.cap-bg__solar-decor
+  width: 348px
+  height: 348px
+  position: absolute
+  top: 593px
+  right: 541px
+  @include media(lg)
+    width: 184px
+    height: 184px
+    top: 442px
+    right: 300px
+
+.cap__wrap
+  position: relative
+  z-index: 1
   padding-bottom: 150px
   overflow: hidden
   @include media(lg)
@@ -65,20 +132,20 @@
   left: -65px
   width: 180px
   @include media(lg)
-    width: 131px
-    top: -35px
-    left: -25px
+    width: 165px
+    top: -56px
+    left: -56px
   @include media(xs)
-    width: 105px
-    top: -22px
-    left: -20px
+    width: 135px
+    top: -44px
+    left: -50px
 
 .cap__button-decor-image
   height: 180px
   @include media(lg)
-    height: 119px
+    height: 165px
   @include media(xs)
-    height: 96px
+    height: 135px
 
 .cap__button
 
@@ -89,6 +156,7 @@
   top: 60px
   right: -40px
   @include media(lg)
+    transform: none !important
     width: 447px
     top: 87px
     right: -120px

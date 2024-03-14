@@ -1,26 +1,40 @@
 section.cap
-  .cap__cont.cont
-    .cap__area
-      h1.cap__title.h1!= 'Выберите лучший билет&nbsp;в&nbsp;мир' + ' <span class="purple">AstroStar</span>!'
-      .cap__text
-        span.purple Промокоды AstroStar
-        |
-        | – ваш билет на VIP-места в увлекательном путешествии по миру астрологии и эзотерики!
-      .cap__button-box
-        picture.cap__button-decor
-          source(srcset=staticImg('cap/cap-button-decor_105.png') media="(max-width: 767px)")
-          source(srcset=staticImg('cap/cap-button-decor_131.png') media="(max-width: 1439px)")
-          img.cap__button-decor-image(src=staticImg('cap/cap-button-decor_180.png') alt='')
-        a.cap__button.btn.btn_green(href="#") Купить промокод
-      picture.cap__picture
-        source(srcset=staticImg(`cap/cap-1_326.webp`) + " 1x, " + staticImg(`cap/cap-1_652.webp`) + " 2x" type="image/webp" media="(max-width: 767px)")
-        source(srcset=staticImg(`cap/cap-1_447.webp`) media="(max-width: 1439px)")
-        source(srcset=staticImg(`cap/cap-1_657.webp`))
-        source(srcset=staticImg(`cap/cap-1_326.png`) + " 1x, " + staticImg(`cap/cap-1_652.png`) + " 2x" type="image/png" media="(max-width: 767px)")
-        source(srcset=staticImg(`cap/cap-1_447.png`) media="(max-width: 1439px)")
-        img.cap__image(src=staticImg('cap/cap-1_657.png') alt='')
-      .cap__apps
-        a.cap__app(href="#" target='_blank')
-          img.cap__app-icon(src=staticImg('ic_app_store.svg') alt='')
-        a.cap__app(href="#" target='_blank')
-          img.cap__app-icon(src=staticImg('ic_google_app.svg') alt='')
+  .cap-bg
+    .cap-bg__cont.cont
+      picture.cap-bg__stars
+        source(srcset=staticImg('cap/cap-bg-stars_320.png') media="(max-width: 1439px)")
+        img.cap-bg__stars-image(src=staticImg('cap/cap-bg-stars.png') alt='')
+  .cap-bg__solar-wrap
+    .cap-bg__solar-cont.cont
+      picture.cap-bg__solar
+        source(srcset=staticImg('cap/cap-bg-solar_837.png') media="(max-width: 1439px)")
+        img.cap-bg__solar-image(src=staticImg('cap/cap-bg-solar.png') alt='')
+      picture.cap-bg__solar-decor.animation-rotate
+        source(srcset=staticImg('cap/cap-bg-solar-decor_184.png') media="(max-width: 1439px)")
+        img.cap-bg__solar-decor-image(src=staticImg('cap/cap-bg-solar-decor.png') alt='')
+  .cap__wrap.js-parallax-area
+    .cap__cont.cont
+      .cap__area
+        h1.cap__title.h1.animation-fade!= 'Выберите лучший билет&nbsp;в&nbsp;мир' + ' <span class="purple">AstroStar</span>!'
+        .cap__text.animation-fade
+          span.purple Промокоды AstroStar
+          |
+          | – ваш билет на VIP-места в увлекательном путешествии по миру астрологии и эзотерики!
+        .cap__button-box
+          picture.cap__button-decor.animation-rotate
+            source(srcset=staticImg('buttons/button-green-solar_135.png') media="(max-width: 767px)")
+            source(srcset=staticImg('buttons/button-green-solar_165.png') media="(max-width: 1439px)")
+            img.cap__button-decor-image(src=staticImg('buttons/button-green-solar.png') alt='')
+          a.cap__button.btn.btn_green(href="#") Купить промокод
+        picture.cap__picture(data-role="parallax-item" data-offset="20")
+          source(srcset=staticImg(`cap/cap-1_326.webp`) + " 1x, " + staticImg(`cap/cap-1_652.webp`) + " 2x" type="image/webp" media="(max-width: 767px)")
+          source(srcset=staticImg(`cap/cap-1_447.webp`) type="image/webp" media="(max-width: 1439px)")
+          source(srcset=staticImg(`cap/cap-1_657.webp`) type="image/webp")
+          source(srcset=staticImg(`cap/cap-1_326.png`) + " 1x, " + staticImg(`cap/cap-1_652.png`) + " 2x" type="image/png" media="(max-width: 767px)")
+          source(srcset=staticImg(`cap/cap-1_447.png`) media="(max-width: 1439px)")
+          img.cap__image(src=staticImg('cap/cap-1_657.png') alt='')
+        .cap__apps
+          a.cap__app(href="#" target='_blank')
+            img.cap__app-icon(src=staticImg('ic_app_store.svg') alt='')
+          a.cap__app(href="#" target='_blank')
+            img.cap__app-icon(src=staticImg('ic_google_app.svg') alt='')

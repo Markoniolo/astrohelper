@@ -2,15 +2,15 @@ section.promo
   .promo__cont.cont
     .promo__wrap
       .promo__box
-        h2.promo__title.h2 Приобрести промокод
-        p.promo__text.text
+        h2.promo__title.h2.animation-fade Приобрести промокод
+        p.promo__text.text.animation-fade
           | Что это будет? Месячный отпуск, большое погружение на полгода или настоящая «релокация» в увлекательный
           | и загадочный мир астрологии сроком на целый год? Решать вам, но что бы вы ни выбрали,
           |
           span.blue AstroStar
           |
           | раскроет максимум информации о том, какую Судьбу готовят вам звёзды!
-        p.promo__text.text.
+        p.promo__text.text.animation-fade.
           Раскройте все секреты и потаённые уголки собственной карты рождения, проверяйте совместимость
           с интересующим вас людьми сразу по пяти параметрам или просканируйте линии на ладони, и они сами расскажут
           о том, какую Судьбу уготовили вам звёзды!
@@ -19,6 +19,7 @@ section.promo
           .promo__line
             button.promo__nav.promo__nav_left
             .promo__tabs
+              .promo__highlight(data-element="promo-highlight")
               button.promo__tab.text(data-element="promo-tab" data-id=0) месяц
               button.promo__tab.promo__tab_active.text(data-element="promo-tab" data-id=1) полгода
               button.promo__tab.text(data-element="promo-tab" data-id=2) год
@@ -32,4 +33,9 @@ section.promo
                   с интересующим вас людьми без ограничений
                 .promo__price.h3= item.price
                 .promo__note.text всего 250 рублей в месяц
-                button.promo__button.btn.btn_green Купить промокод
+                .promo__button-box
+                  picture.promo__button-decor.animation-rotate
+                    source(srcset=staticImg('buttons/button-green-solar_135.png') media="(max-width: 767px)")
+                    source(srcset=staticImg('buttons/button-green-solar_165.png') media="(max-width: 1439px)")
+                    img.promo__button-decor-image(src=staticImg('buttons/button-green-solar.png') alt='')
+                  a.promo__button.btn.btn_green Купить промокод

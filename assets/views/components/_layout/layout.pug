@@ -3,14 +3,12 @@ include _connect-style
 include _title
 
 doctype html
-html(lang='en')
+html(lang='ru')
   head
     include _head
     block head
   body#body(class = `body_${VIEW}`)
     include header
-    if VIEW === 'index'
-      include cap-bg
     main.wrapper
       block body
     include footer

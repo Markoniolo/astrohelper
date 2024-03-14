@@ -29,7 +29,7 @@ footer.footer
               if VIEW === 'index'
                 a.footer__link.link-white.text(href=item.href data-role="scroll-to-anchor")= item.text
               else
-                a.footer__link.link-white(href=`/index.html${item.href}`)= item.text
+                a.footer__link.link-white.text(href=`/index.html${item.href}`)= item.text
       .footer__pay
         each item in ['ic_pay_1','ic_pay_2','ic_pay_3','ic_pay_4']
           img.footer__pay-icon(src=staticImg(`${item}.svg`) alt='')

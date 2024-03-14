@@ -1,0 +1,26 @@
+.animation-fade
+  opacity: 0
+  transform: translateY(-20px)
+  transition-delay: 0.1s
+  transition-duration: 1s
+  transition-property: transform, opacity
+
+.animation-fade_active
+  opacity: 1
+  transform: translateY(0)
+
+.animation-rotate
+  animation: 10s animationRotate infinite linear
+  @keyframes animationRotate
+    0%
+      transform: rotate(0)
+    100%
+      transform: rotate(360deg)
+
+@keyframes radiantGreenGlow
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0

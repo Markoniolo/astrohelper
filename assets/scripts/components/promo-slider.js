@@ -15,6 +15,9 @@ function promoSliderInit () {
   });
 
   const tabs = promoSlider.querySelectorAll('[data-element="promo-tab"]')
+  const highlight = promoSlider.querySelector('[data-element="promo-highlight"]')
+
+  updateHighlight(tabs[1])
 
   for (let i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', toggleSlider)
@@ -25,6 +28,7 @@ function promoSliderInit () {
     this.classList.add('promo__tab_active')
     const id = this.getAttribute('data-id')
     promoSwiper.slideTo(id)
+    updateHighlight(this)
   }
 
   function removeOldActiveTab () {
@@ -36,6 +40,12 @@ function promoSliderInit () {
     removeOldActiveTab()
     console.log(promoSwiper.activeIndex)
     const newActiveTab = tabs[promoSwiper.activeIndex]
-    if (newActiveTab) newActiveTab.classList.add('promo__tab_active')
+    newActiveTab.classList.add('promo__tab_active')
+    updateHighlight(newActiveTab)
   })
+
+  function updateHighlight (item) {
+    highlight.style.width = `${item.offsetWidth}px`
+    highlight.style.transform = `translateX(${item.offsetLeft - 4}px)`
+  }
 }

@@ -7,8 +7,17 @@ function faqTopsInit () {
     faqTops[i].addEventListener('click', toggleBox)
   }
 
+  faqTops[0].click()
+
   function toggleBox () {
     const box = this.closest('.faq__box')
-    box.classList.toggle('faq__box_active')
+    const content = box.querySelector('.faq__content-box')
+    if (box.classList.contains('faq__box_active')) {
+      box.classList.remove('faq__box_active')
+      content.style.maxHeight = 0
+    } else {
+      box.classList.add('faq__box_active')
+      content.style.maxHeight = content.scrollHeight + "px"
+    }
   }
 }

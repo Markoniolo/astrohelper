@@ -18,6 +18,7 @@ function promoSliderInit () {
   const highlight = promoSlider.querySelector('[data-element="promo-highlight"]')
 
   updateHighlight(tabs[1])
+  window.addEventListener('resize', () => updateHighlight(promoSlider.querySelector('.promo__tab_active')))
 
   for (let i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', toggleSlider)

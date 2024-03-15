@@ -43,7 +43,7 @@
 .faq__box
   +bgIcon('faq/faq-box-bg.svg')
   transition-property: background
-  transition-duration: $transition-duration
+  transition-duration: 0.5s
   &:not(:last-of-type)
     margin-bottom: 12px
     @include media(xs)
@@ -52,20 +52,11 @@
     +bgIcon('faq/faq-box-bg-hover.svg')
 
 .faq__box_active
-  transition-duration: 0s
   +bgIcon('faq/faq-box-bg-open.svg')
   &:hover
     +bgIcon('faq/faq-box-bg-open.svg')
-  .faq__content
-    display: block
-    margin-top: 5px
-  .faq__top
-    @include media(lg)
-      padding: 28px 60px 16px 28px
-    @include media(xs)
-      padding: 28px 50px 16px 20px
-    &::before
-      transform: rotate(45deg)
+  .faq__top::before
+    transform: rotate(45deg)
 
 .faq__top
   position: relative
@@ -82,7 +73,7 @@
     position: absolute
     top: 28px
     right: 28px
-    transition-duration: $transition-duration
+    transition-duration: 0.5s
     transition-property: transform
     +bgIcon('ic_faq_cross.svg')
     @include media(lg)
@@ -93,9 +84,14 @@
       height: 20px
       right: 20px
 
+.faq__content-box
+  transition-duration: 0.5s
+  transition-property: max-height
+  max-height: 0
+  overflow: hidden
+
 .faq__content
-  display: none
-  padding: 0 28px 28px
+  padding: 0 28px 32px
   color: #D4C4FB
   @include media(xs)
     padding: 0 20px 28px

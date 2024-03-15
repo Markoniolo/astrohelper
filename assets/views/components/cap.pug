@@ -1,3 +1,11 @@
+-
+  const capPictureArray = [
+    { offset: 30, rotate: '0.83deg' },
+    { offset: 10, rotate: '10.03deg' },
+    { offset: 30, rotate: '0.83deg' },
+    { offset: 40, rotate: '0.83deg' },
+  ]
+
 section.cap
   .cap-bg
     .cap-bg__cont.cont
@@ -26,13 +34,17 @@ section.cap
             source(srcset=staticImg('buttons/button-green-solar_165.png') media="(max-width: 1439px)")
             img.cap__button-decor-image(src=staticImg('buttons/button-green-solar.png') alt='')
           a.cap__button.btn.btn_green(href="#") Купить промокод
-        picture.cap__picture(data-role="parallax-item" data-offset="20")
+        .cap__picture-box
+          each item, index in capPictureArray
+            picture.cap__picture(data-role="parallax-item" data-offset=item.offset class=`cap__picture_${index+1}`
+              data-transform=`rotate(${item.rotate})`)
+              source(srcset=staticImg(`cap/cap-${index+1}.webp`) type="image/webp")
+              img.cap__image(src=staticImg(`cap/cap-${index+1}.png`) alt='')
+        picture.cap__picture-mobile
           source(srcset=staticImg(`cap/cap-1_326.webp`) + " 1x, " + staticImg(`cap/cap-1_652.webp`) + " 2x" type="image/webp" media="(max-width: 767px)")
-          source(srcset=staticImg(`cap/cap-1_447.webp`) type="image/webp" media="(max-width: 1439px)")
-          source(srcset=staticImg(`cap/cap-1_657.webp`) type="image/webp")
-          source(srcset=staticImg(`cap/cap-1_326.png`) + " 1x, " + staticImg(`cap/cap-1_652.png`) + " 2x" type="image/png" media="(max-width: 767px)")
-          source(srcset=staticImg(`cap/cap-1_447.png`) media="(max-width: 1439px)")
-          img.cap__image(src=staticImg('cap/cap-1_657.png') alt='')
+          source(srcset=staticImg(`cap/cap-1_447.webp`) type="image/webp")
+          source(srcset=staticImg(`cap/cap-1_326.png`) + " 1x, " + staticImg(`cap/cap-1_652.png`) + " 2x" media="(max-width: 767px)")
+          img.cap__image-mobile(src=staticImg('cap/cap-1_447.png') alt='')
         .cap__apps
           a.cap__app(href="#" target='_blank')
             img.cap__app-icon(src=staticImg('ic_app_store.svg') alt='')

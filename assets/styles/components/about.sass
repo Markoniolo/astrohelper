@@ -4,6 +4,7 @@
     margin-bottom: 132px
   @include media(xs)
     margin-bottom: 50px
+    overflow: hidden
 
 .about__cont
   padding: 0
@@ -31,6 +32,7 @@
     max-width: 500px
   @include media(xs)
     max-width: 100%
+    overflow: visible
 
 .about__title
   margin-bottom: 36px
@@ -60,8 +62,6 @@
     min-height: 445px
     margin-left: 20px
   .swiper-slide-active
-    transition-property: transform
-    transition-duration: $transition-duration
     transform: scale(1.9125)
     margin-left: 75px
     @include media(lg)
@@ -85,6 +85,8 @@
 .about__slide
   width: 160px
   box-shadow: 2px 24px 30px 0 rgba(32, 5, 78, 0.7)
+  transition-property: transform
+  transition-duration: 0.6s
 
 .about__picture
 
@@ -122,7 +124,7 @@
 .about__box
   position: relative
   z-index: 1
-  padding: 101px 72px 101px 110px
+  padding: 101px 80px 101px 110px
   +bgIcon('about/about-box-bg.png')
   background-size: cover
   @include media(lg)

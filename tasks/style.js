@@ -23,7 +23,6 @@ const style = function () {
       .pipe(gcmq())
       .pipe(cleanCSS({ level: 2 }))
       .pipe(dest(`${env.outputFolder}/statics/css`))
-      .pipe(dest(`${env.outputBackFolder}/statics/style`))
   }
   return src(path.pages)
     .pipe(header('@import "../variables"\n'))

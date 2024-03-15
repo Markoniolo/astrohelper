@@ -14,9 +14,21 @@
   +bgIcon('buttons/btn_bg_blue.svg')
   &:hover
     +bgIcon('buttons/btn_bg_blue_hover.svg')
+  &::before
+    content: ''
+    opacity: 0
+    position: absolute
+    pointer-events: none
+    +bgIcon('buttons/btn_bg_blue_hover.svg')
 
 .btn_green
   color: #ffffff
   +bgIcon('buttons/btn_bg_green.svg')
   &:hover
+    +bgIcon('buttons/btn_bg_green_hover.svg')
+  &::before
+    content: ''
+    opacity: 0
+    position: absolute
+    pointer-events: none
     +bgIcon('buttons/btn_bg_green_hover.svg')

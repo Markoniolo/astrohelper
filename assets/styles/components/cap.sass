@@ -149,14 +149,57 @@
 
 .cap__button
 
-.cap__picture
+.cap__picture-box
   position: absolute
   z-index: -1
   width: 657px
+  height: 673px
   top: 60px
   right: -40px
   @include media(lg)
+    display: none
+
+.cap__picture
+  position: absolute
+
+.cap__picture_1
+  width: 236px
+  height: 338px
+  top: 110px
+  left: -5px
+  transform: rotate(0.83deg)
+
+.cap__picture_2
+  z-index: 2
+  width: 415px
+  height: 750px
+  top: -30px
+  left: 60px
+  transform: rotate(10.03deg)
+
+.cap__picture_3
+  z-index: 1
+  width: 317px
+  height: 418px
+  top: 260px
+  left: 295px
+  transform: rotate(0.83deg)
+
+.cap__picture_4
+  width: 236px
+  height: 338px
+  top: 165px
+  left: 430px
+  transform: rotate(0.83deg)
+
+.cap__image
+
+.cap__picture-mobile
+  display: none
+  @include media(lg)
+    display: block
     transform: none !important
+    position: absolute
     width: 447px
     top: 87px
     right: -120px
@@ -166,9 +209,7 @@
     width: 100%
     margin: 0 auto 37px
 
-.cap__image
-  height: 673px
-  object-fit: cover
+.cap__image-mobile
   @include media(lg)
     height: 458px
   @include media(xs)

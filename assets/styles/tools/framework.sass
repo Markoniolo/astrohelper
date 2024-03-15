@@ -121,6 +121,12 @@
     +bgIcon('ic_nav_arrow_right.svg')
   &:hover
     +bgIcon('ic_nav_arrow_bg_hover.svg')
+  &::after
+    content: ''
+    +bgIcon('ic_nav_arrow_bg_hover.svg')
+    opacity: 0
+    position: absolute
+    pointer-events: none
   @include media(lg)
     width: 48px
     height: 48px

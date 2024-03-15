@@ -5,6 +5,5 @@ module.exports = {
   production,
   hash,
   outputFolder: production ? 'prod' : 'dev',
-  outputBackFolder: '../site/web/frontend',
   url: ''
 }
